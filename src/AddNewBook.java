@@ -203,7 +203,7 @@ public class AddNewBook extends javax.swing.JFrame {
                     .addComponent(jSubmitButton1)
                     .addComponent(jResetButton2)
                     .addComponent(jBackButton1))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
