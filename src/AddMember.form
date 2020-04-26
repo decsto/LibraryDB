@@ -62,10 +62,9 @@
                               <Component id="jDateChooser1" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jmIDField1" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="jmIDField1" min="-2" pref="179" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
