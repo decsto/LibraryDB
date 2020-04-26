@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /*
@@ -248,7 +249,10 @@ public class AddNewBook extends javax.swing.JFrame {
         String author = jAuthorTextField1.getText();
         String publishBy = jPublisherTextField4.getText();
         String yearPub = jYearPubTextField5.getText();
-        
+        if (ISBN.equals("")||title.equals("")||author.equals("")||publishBy.equals("")||yearPub.equals("")){
+            JOptionPane.showMessageDialog(rootPane, "All fields must be filled" );
+                    
+        }else{
         try {
             // Step 2.A: Create and get connection using DriverManager class
             con = DriverManager.getConnection(dbURL);
@@ -284,7 +288,7 @@ public class AddNewBook extends javax.swing.JFrame {
     } // End of Constructor
                                           
     }//GEN-LAST:event_jSubmitButton1ActionPerformed
-
+    }
     private void jResetButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResetButton2ActionPerformed
         // Reset button handling code here:
         resetFields();
