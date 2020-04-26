@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -148,7 +149,10 @@ public class ReturnBook extends javax.swing.JFrame {
         // Submit return book loan
         
         String cpyID = jcpyIDField1.getText();
-        
+        if (cpyID.equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Enter the cpyID" );
+                    
+        }else{
         
         
         try {
@@ -182,7 +186,7 @@ public class ReturnBook extends javax.swing.JFrame {
             }
         } // End of Constructor
     }//GEN-LAST:event_btnSubmitActionPerformed
-
+    }
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // Reset button code
         resetFields();
