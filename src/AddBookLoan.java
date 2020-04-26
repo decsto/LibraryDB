@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /**
  *
@@ -210,6 +211,10 @@ public class AddBookLoan extends javax.swing.JFrame {
         
         java.util.Date dueDate =  jDateChooser2.getDate();
         //Date dueDate = jXDatePicker1.getRealizedDatePicker();
+        if (mID.equals("")||ISBN.equals("")||cpyID.equals("")){
+            JOptionPane.showMessageDialog(rootPane, "All fields must be filled" );
+                    
+        }else{
         try {
             // Step 2.A: Create and get connection using DriverManager class
             con = DriverManager.getConnection(dbURL);
@@ -243,7 +248,7 @@ public class AddBookLoan extends javax.swing.JFrame {
             } 
     } // End of Constructor
     }//GEN-LAST:event_btnSubmitActionPerformed
-
+    }
     private void jmIDField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmIDField1ActionPerformed
         // Member id code:
     }//GEN-LAST:event_jmIDField1ActionPerformed
