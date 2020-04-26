@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 /**
  *
@@ -209,6 +210,10 @@ public class AddMember extends javax.swing.JFrame {
         
         java.util.Date joined =  jDateChooser1.getDate();
         //Date dueDate = jXDatePicker1.getRealizedDatePicker();
+        if (mID.equals("")||fName.equals("")||Surname.equals("")){
+            JOptionPane.showMessageDialog(rootPane, "All fields must be filled" );
+                    
+        }else{
         try {
             // Step 2.A: Create and get connection using DriverManager class
             con = DriverManager.getConnection(dbURL);
@@ -245,7 +250,7 @@ public class AddMember extends javax.swing.JFrame {
                                          
 
     }//GEN-LAST:event_jSubmitButton1ActionPerformed
-
+    }
     private void jResetButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResetButton1ActionPerformed
         // TODO add your handling code here:
         resetFields();
